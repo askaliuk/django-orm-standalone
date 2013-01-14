@@ -8,6 +8,7 @@ In one of my projects, i had architecture challenge to separate out Django ORM b
 Structure
 ---------
 The application contains 3 main modules:
+
  - **data** - provides standalone data access module, based on Django ORM. It contains models and database settings.
  - **mysite** - simple Django site, which uses "data" module for data access purpose. It re-uses models from "data" module
    and can contain it's own specific models. It based on database settings from "data" module.
@@ -15,14 +16,15 @@ The application contains 3 main modules:
 
 Approach
 --------
-Proposed project structure requires "data" module to be importable and visible by other components. I don't like python path manipulations inside code, because it decreases portability. Also i would like to avoid have root package, which contain all components and use root import like "import root.data". My idea is to keep all components separated and use simple import like "import data". This task is could be accomplished by environment setup. That's why i'm using virtualenv and virtualenvwrapper.
+Proposed project structure requires "data" module to be importable and visible by other components. I don't like python path manipulations inside code, because it decreases portability. Also i would like to avoid have root package, which contain all components and use root import like "import root.data". My idea is to keep all components separated and use simple import like "import data". This task is could be accomplished by environment setup. That's why i'm using **virtualenv** and **virtualenvwrapper**.
 
 How to use
 ----------
 ::
 
+    easy_install virtualenv
+    easy_install virtualenvwrapper
     cd django-orm-standalone
-    pip install virtualenvwrapper
     mkvirtualenv django-orm-standalone
     add2virtualenv .
     pip install -r requirements.txt
