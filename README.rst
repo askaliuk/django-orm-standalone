@@ -9,10 +9,9 @@ Structure
 ---------
 The application contains 3 main modules:
 
- - **data** - provides standalone data access module, based on Django ORM. It contains models and database settings.
- - **mysite** - simple Django site, which uses "data" module for data access purpose. It re-uses models from "data" module
-   and can contain it's own specific models. It based on database settings from "data" module.
- - **test** - plain Python test, which has "data" module as dependency for data access purpose
+* **data** - provides standalone data access module, based on Django ORM. It contains models and database settings.
+* **mysite** - simple Django site, which uses "data" module for data access purpose. It re-uses models from "data" module and can contain it's own specific models. It based on database settings from "data" module.
+* **test** - plain Python test, which has "data" module as dependency for data access purpose
 
 Approach
 --------
