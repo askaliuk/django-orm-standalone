@@ -1,5 +1,5 @@
 """
-Contains database access settings.
+Contains the database access settings.
 """
 
 DATABASES = {
